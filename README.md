@@ -4,6 +4,8 @@
 
 ## Running the app
 
+The app has been tested with demo mail and there are no mail credentials in the environment. If you want to test sending emails, you should add them to the .env file.
+
 ```bash
 docker compose up -d
 ```
