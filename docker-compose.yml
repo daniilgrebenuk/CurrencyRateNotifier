@@ -1,0 +1,20 @@
+services:
+  postgresdb:
+    image: postgres
+    volumes:
+      - db:/var/lib/postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+  app:
+    build: ./
+    restart: on-failure
+    depends_on:
+      - postgresdb
+    ports:
+      - "8080:8080"
+volumes:
+  db:
