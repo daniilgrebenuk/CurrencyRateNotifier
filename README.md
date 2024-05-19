@@ -5,11 +5,11 @@
 ## Running the app
 
 ```bash
-$ docker compose up -d
+docker compose up -d
 ```
 
 ## Test
 Integration tests were written for the project with mocked sending emails and retrieving currency exchange rate data.
 ```bash
-$ npm run test
+npm run test
 ```
